@@ -163,8 +163,7 @@ def convolution_init(config):
     restart_file = None
 
     if options['RUN_TYPE'] == 'restart':
-        restart = read_config(os.path.join(directories['restarts'],
-                                           'rpointer'))
+        restart = read_config(config_dict['OPTIONS']['RESTART_FILE'])
         timestr = restart['RESTART']['TIMESTAMP']
         restart_file = restart['RESTART']['FILE_NAME']
     elif options['RUN_TYPE'] == 'startup':
