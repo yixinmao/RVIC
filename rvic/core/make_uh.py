@@ -16,6 +16,7 @@ Removed read and write functions to make more modular.
 Now called from make_parameters.py
 '''
 
+
 import numpy as np
 import logging
 from scipy.interpolate import interp1d
@@ -155,9 +156,10 @@ def rout(pour_point, uh_box, fdr_data, fdr_atts, rout_dict):
     # ---------------------------------------------------------------- #
     # Make uh_s for each grid cell upstream of basin pour point
     # (combine IRFs for all grid cells in flow path)
-    uh_s = make_grid_uh(t_uh, t_cell, uh_river, uh_box, to_y, to_x,
-                        catchment['y_inds'], catchment['x_inds'],
-                        catchment['count_ds'])
+#    uh_s = make_grid_uh(t_uh, t_cell, uh_river, uh_box, to_y, to_x,
+#                        catchment['y_inds'], catchment['x_inds'],
+#                        catchment['count_ds'])
+    uh_s = uh_river
     # ---------------------------------------------------------------- #
 
     # ---------------------------------------------------------------- #
