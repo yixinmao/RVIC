@@ -20,12 +20,15 @@ from .core.variables import Point
 from .core.param_file import finish_params
 from .core.config import read_config
 from .core.pycompat import OrderedDict, iteritems, pyrange, basestring
+import warnings
+warnings.filterwarnings('ignore')
 
-try:
-    from .core.remap import remap
-    remap_available = True
-except ImportError:
-    remap_available = False
+#try:
+#    from .core.remap import remap
+#    remap_available = True
+#except ImportError:
+#    remap_available = False
+remap_available = False
 
 # global multiprocessing results container
 results = {}

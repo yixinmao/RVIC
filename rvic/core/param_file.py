@@ -184,10 +184,9 @@ def finish_params(outlets, dom_data, config_dict, directories):
     # Write parameter file
     today = date.today().strftime('%Y%m%d')
     param_file = os.path.join(directories['params'],
-                              '{0}.rvic.prm.{1}.{2}.'
+                              '{0}.rvic.prm.{1}.'
                               'nc'.format(options['CASEID'],
-                                          options['GRIDID'],
-                                          today))
+                                          options['GRIDID']))
 
     if 'NEW_DOMAIN' in list(config_dict.keys()):
         dom_file_name = config_dict['NEW_DOMAIN']['FILE_NAME']
